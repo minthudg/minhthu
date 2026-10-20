@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ee">
+  <meta name="description" content="Một góc nhỏ giới thiệu về Nguyễn Đặng Minh Thư — âm nhạc, nhiếp ảnh và những điều mình yêu thích.">
+  <title>Nguyễn Đặng Minh Thư — About me</title>
+  <style>
+    :root{--paper:#f5f3ee;--ink:#20231f;--muted:#73776e;--line:#deded5;--green:#c9d6c0;--deep:#405343;--white:#fffefa}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+    a{color:inherit}
+    .wrap{width:min(1080px,calc(100% - 48px));margin:auto}
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .wordmark{font-size:15px;font-weight:750;letter-spacing:.03em;text-decoration:none}
+    .nav-note{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+    .back{font-size:13px;text-decoration:none;border-bottom:1px solid #9aa092;padding-bottom:3px}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:64px;align-items:center;padding:88px 0 96px}
+    .eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--deep);font-weight:750}
+    h1{font-size:clamp(46px,7vw,82px);line-height:1.02;letter-spacing:-.065em;font-weight:650;margin:23px 0 22px;max-width:680px}
+    h1 span{font-family:Georgia,serif;font-weight:400;font-style:italic;color:var(--deep)}
+    .lead{font-size:17px;line-height:1.9;color:#5e6259;max-width:520px}
+    .hero-foot{margin-top:34px;display:flex;align-items:center;gap:14px;color:var(--muted);font-size:12px}
+    .dot{width:7px;height:7px;border-radius:50%;background:#71866b;display:inline-block}
+    .visual{position:relative;min-height:390px;display:grid;place-items:center}
+    .shape{width:min(310px,75%);aspect-ratio:4/5;background:var(--green);border-radius:48% 48% 8px 8px;position:relative;overflow:hidden}
+    .shape:before{content:"";position:absolute;width:210px;height:210px;border:1px solid rgba(64,83,67,.38);border-radius:50%;left:50%;top:17%;transform:translateX(-50%)}
+    .shape:after{content:"";position:absolute;width:145px;height:145px;border-radius:50%;background:#e9cdb9;left:50%;top:26%;transform:translateX(-50%)}
+    .sun{position:absolute;right:4%;top:12%;width:64px;height:64px;border-radius:50%;background:#d9b98f}
+    .leaf{position:absolute;z-index:2;bottom:13%;left:24%;width:130px;height:70px;border:1px solid var(--deep);border-radius:100% 0 100% 0;transform:rotate(-28deg)}
+    .leaf:after{content:"";position:absolute;width:1px;height:100px;background:var(--deep);left:50%;top:-10px;transform:rotate(34deg)}
+    .stamp{position:absolute;bottom:7%;right:0;background:var(--white);padding:15px 18px;font-family:Georgia,serif;font-size:14px;box-shadow:0 12px 35px #20231f0d}
+    section{padding:68px 0;border-top:1px solid var(--line)}
+    .section-head{display:grid;grid-template-columns:.7fr 1.3fr;gap:30px;margin-bottom:34px}
+    h2{font-size:clamp(27px,4vw,42px);letter-spacing:-.045em;line-height:1.2;margin:0;font-weight:600}
+    .section-desc{margin:0;color:var(--muted);max-width:530px}
+    .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .fact{padding:22px;background:var(--white);border:1px solid var(--line);min-height:130px}
+    .fact small{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.14em;margin-bottom:12px}
+    .fact strong{font-size:17px;font-weight:600}
+    .interests{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .interest{padding:25px;background:transparent;border:1px solid var(--line);display:flex;gap:18px;align-items:flex-start}
+    .num{font-size:12px;color:var(--deep);font-weight:700;padding-top:4px}
+    .interest h3{font-size:18px;margin:0 0 6px;font-weight:600}
+    .interest p{margin:0;color:var(--muted);font-size:14px}
+    .tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+    .tag{border:1px solid #cdd1c7;border-radius:99px;padding:7px 13px;font-size:12px;color:#4f594d}
+    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .skill{border-top:2px solid var(--deep);padding:18px 0}
+    .skill b{display:block;font-size:16px;margin-bottom:7px}
+    .skill p{font-size:14px;color:var(--muted);margin:0}
+    .dream{background:var(--deep);color:#f7f5ee;padding:42px;display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
+    .dream .eyebrow{color:#c9d6c0}
+    .dream h2{margin:12px 0}
+    .dream p{color:#d5ddd1;margin:0;max-width:600px}
+    .de-mark{font-family:Georgia,serif;font-size:clamp(58px,9vw,100px);line-height:1;color:#c9d6c0;letter-spacing:-.08em}
+    footer{padding:28px 0 38px;display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:12px}
+    @media(max-width:720px){.wrap{width:min(100% - 32px,560px)}.nav{height:70px}.nav-note{display:none}.hero{grid-template-columns:1fr;gap:20px;padding:60px 0 64px}.hero-copy{order:1}.visual{order:0;min-height:270px}.shape{width:200px}.sun{right:13%;top:4%}.stamp{right:8%;bottom:3%}section{padding:50px 0}.section-head{grid-template-columns:1fr;gap:12px}.facts{grid-template-columns:1fr}.fact{min-height:0}.interests{grid-template-columns:1fr}.skills{grid-template-columns:1fr;gap:8px}.skill{padding:14px 0}.dream{padding:28px;grid-template-columns:1fr}.de-mark{font-size:62px}footer{flex-direction:column;gap:5px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="nav">
+      <a class="wordmark" href="#top">MINH THƯ<span style="color:#71866b">.</span></a>
+      <span class="nav-note">Một chút về mình</span>
+      <a class="back" href="./index.html">← Về Melora</a>
+    </header>
+    <main id="top">
+      <section class="hero" style="border-top:0">
+        <div class="hero-copy">
+          <span class="eyebrow">HELLO, NICE TO MEET YOU</span>
+          <h1>Xin chào,<br>mình là <span>Minh Thư.</span></h1>
+          <p class="lead">Một cô gái đang học cấp 3, thích lưu giữ những khoảnh khắc qua ống kính, tìm thấy cảm hứng trong âm nhạc và luôn tò mò với những câu chuyện mới.</p>
+          <div class="hero-foot"><span class="dot"></span> Một góc nhỏ kể về mình, theo cách giản dị nhất.</div>
+        </div>
+        <div class="visual" aria-label="Minh họa trừu tượng với hình khối và chiếc lá">
+          <div class="sun"></div><div class="shape"><div class="leaf"></div></div>
+          <div class="stamp">growing at my own pace ✳</div>
+        </div>
+      </section>
+      <section id="about">
+        <div class="section-head">
+          <div><span class="eyebrow">01 / ABOUT ME</span><h2 style="margin-top:12px">Một vài điều<br>về mình</h2></div>
+          <p class="section-desc">Mình là Nguyễn Đặng Minh Thư, hiện đang học tại trường THPT Phú Nhuận. Mình tự nhận là người thân thiện và giàu đồng cảm — đôi khi cũng mít ướt, dễ cáu và hơi lười một chút. Có lẽ những điều không hoàn hảo ấy cũng làm mình trở thành chính mình.</p>
+        </div>
+        <div class="facts">
+          <div class="fact"><small>Birthday</small><strong>23 tháng 7</strong></div>
+          <div class="fact"><small>My personality</small><strong>ISFJ</strong></div>
+          <div class="fact"><small>Currently</small><strong>THPT Phú Nhuận</strong></div>
+        </div>
+      </section>
+      <section id="interests">
+        <div class="section-head">
+          <div><span class="eyebrow">02 / THINGS I LOVE</span><h2 style="margin-top:12px">Thế giới nhỏ<br>của mình</h2></div>
+          <p class="section-desc">Mình thích những điều giúp cảm xúc được thể hiện — từ một bức ảnh, một trang sách đến một bài hát nghe đi nghe lại.</p>
+        </div>
+        <div class="interests">
+          <article class="interest"><span class="num">01</span><div><h3>Âm nhạc & K-pop</h3><p>Nghe nhạc là một trong những cách mình tận hưởng thời gian và tìm cảm hứng mỗi ngày.</p></div></article>
+          <article class="interest"><span class="num">02</span><div><h3>Nhiếp ảnh</h3><p>Mình tham gia CLB Phú Nhuận Multimedia ở mảng Photo và thích lưu lại những khoảnh khắc qua ống kính.</p></div></article>
+          <article class="interest"><span class="num">03</span><div><h3>Sách & hội họa</h3><p>Yêu đọc sách, thích vẽ và khám phá những ý tưởng mới qua từng trang giấy.</p></div></article>
+          <article class="interest"><span class="num">04</span><div><h3>Phim, manga & anime</h3><p>Mình thích xem phim, đọc manga và xem anime — những thế giới có câu chuyện để khám phá.</p></div></article>
+        </div>
+        <div class="tags"><span class="tag">Music</span><span class="tag">Photography</span><span class="tag">Reading</span><span class="tag">Drawing</span><span class="tag">K-pop</span><span class="tag">Manga & Anime</span></div>
+      </section>
+      <section id="skills">
+        <div class="section-head">
+          <div><span class="eyebrow">03 / WHAT I BRING</span><h2 style="margin-top:12px">Điều mình<br>đang phát triển</h2></div>
+          <p class="section-desc">Mình vẫn đang học hỏi từng ngày, cả trong cách làm việc với mọi người lẫn cách hiểu bản thân hơn.</p>
+        </div>
+        <div class="skills">
+          <div class="skill"><b>Lãnh đạo</b><p>Có khả năng định hướng và phối hợp công việc trong nhóm.</p></div>
+          <div class="skill"><b>Làm việc nhóm</b><p>Biết cùng mọi người chia sẻ trách nhiệm để hướng đến mục tiêu chung.</p></div>
+          <div class="skill"><b>Giao tiếp</b><p>Có kỹ năng giao tiếp cơ bản và sẵn sàng tiếp tục rèn luyện.</p></div>
+        </div>
+      </section>
+      <section id="dream">
+        <div class="dream">
+          <div><span class="eyebrow">04 / A DREAM TO FOLLOW</span><h2>Một ngày nào đó, ở Đức.</h2><p>Mình mong muốn được đi du học Đức — một mục tiêu để từng bước chuẩn bị, học hỏi và cố gắng trong những năm tháng phía trước.</p></div>
+          <div class="de-mark" aria-label="Germany">DE.</div>
+        </div>
+      </section>
+    </main>
+    <footer><span>© 2026 · Nguyễn Đặng Minh Thư</span><span>Made with care, one little detail at a time.</span></footer>
+  </div>
+</body>
+</html>
